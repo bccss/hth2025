@@ -8,6 +8,7 @@ const Nav = () => {
         <div className="space-x-4">
           <Link to="/" className="text-gray-300 hover:text-white transition-colors">Home</Link>
           <Link to="/schedule" className="text-gray-300 hover:text-white transition-colors">Schedule</Link>
+          <Link to="/about" className="text-gray-300 hover:text-white transition-colors">About</Link>
           <Link to="/sponsors" className="text-gray-300 hover:text-white transition-colors">Sponsors</Link>
         </div>
       </div>
