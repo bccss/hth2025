@@ -49,12 +49,12 @@ const SponsorList = [
 
 function Sponsors() {
     return (
-        <div className="min-h-screen bg-sky-100 py-12 px-4">
+        <div className="min-h-screen bg-backgroundPurple py-12 px-4">
             <div className="max-w-4xl mx-auto">
-                <h1 className="text-4xl font-bold text-center text-slate-800 mb-12">Our Sponsors</h1>
+                <h1 className="text-4xl font-bold text-center text-fontCream mb-12">Our Sponsors</h1>
                 {SponsorList.map((category) => (
                     <div key={category.category} className="mb-16">
-                        <h2 className="text-3xl font-bold text-slate-700 mb-8 border-b-2 border-sky-200 pb-2">
+                        <h2 className="text-3xl font-bold text-fontCream mb-8 border-b-2 border-[var(--color-lightPurple)] pb-2">
                             {category.category}
                         </h2>
                         <div className="grid grid-cols-1 gap-8 relative">
@@ -83,14 +83,14 @@ function Sponsors() {
                                         type: "spring",
                                         stiffness: 100
                                     }}
-                                    className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl 
+                                    className="bg-[var(--color-lightPurple)]/20 backdrop-blur-lg rounded-xl p-6 shadow-lg hover:shadow-xl 
                                              transition-shadow duration-300
                                              flex flex-col md:flex-row items-center md:items-start gap-6"
                                 >
                                     <div className="flex flex-col items-center md:items-start flex-1">
-                                        <h3 className="text-3xl font-bold text-slate-800 mb-3">{sponsor.name}</h3>
-                                        <h4 className="text-lg text-slate-700 mb-4">{sponsor.role}</h4>
-                                        <div className="text-slate-700 space-y-3 max-w-xl">
+                                        <h3 className="text-3xl font-bold text-fontCream mb-3">{sponsor.name}</h3>
+                                        <h4 className="text-lg text-[var(--color-lightPink)] mb-4">{sponsor.role}</h4>
+                                        <div className="text-[var(--color-secondaryCream)]/80 space-y-3 max-w-xl">
                                             <p className="text-base leading-relaxed">{sponsor.about}</p>
                                             <p className="text-base leading-relaxed">{sponsor.background}</p>
                                         </div>
@@ -103,7 +103,7 @@ function Sponsors() {
                                         <img 
                                             src={sponsor.photo} 
                                             alt={`${sponsor.name} logo`} 
-                                            className="w-32 h-32 rounded-full object-contain bg-white p-3 shadow-md"
+                                            className="w-32 h-32 rounded-full object-contain bg-backgroundCream p-3 shadow-md"
                                         />
                                     </motion.div>
                                 </motion.div>

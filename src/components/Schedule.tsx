@@ -78,15 +78,15 @@ const Schedule = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 py-12 px-4">
+    <div className="min-h-screen bg-backgroundPurple py-12 px-4">
       <div className="max-w-2xl mx-auto">
-        <h2 className="text-4xl font-bold text-white text-center mb-8">Schedule</h2>
+        <h2 className="text-4xl font-bold text-fontCream text-center mb-8">Schedule</h2>
         
         {/* Day Switcher */}
         <div className="flex justify-center mb-8">
-          <div className="relative bg-gray-700 rounded-full p-1">
+          <div className="relative bg-[var(--color-lightPurple)]/50 rounded-full p-1">
             <motion.div
-              className="absolute h-full bg-blue-500 rounded-full"
+              className="absolute h-full bg-[var(--color-lightPink)] rounded-full"
               initial={false}
               animate={{
                 left: activeDay === 'day1' ? '0%' : '50%',
@@ -96,7 +96,7 @@ const Schedule = () => {
             />
             <button
               className={`relative px-6 py-2 rounded-full text-sm font-medium z-10 ${
-                activeDay === 'day1' ? 'text-white' : 'text-gray-300'
+                activeDay === 'day1' ? 'text-fontCream' : 'text-[var(--color-secondaryCream)]/70'
               }`}
               onClick={() => setActiveDay('day1')}
             >
@@ -104,7 +104,7 @@ const Schedule = () => {
             </button>
             <button
               className={`relative px-6 py-2 rounded-full text-sm font-medium z-10 ${
-                activeDay === 'day2' ? 'text-white' : 'text-gray-300'
+                activeDay === 'day2' ? 'text-fontCream' : 'text-[var(--color-secondaryCream)]/70'
               }`}
               onClick={() => setActiveDay('day2')}
             >
@@ -123,15 +123,15 @@ const Schedule = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 whileHover={{ scale: 1.02 }}
-                className="bg-white/10 backdrop-blur-lg rounded-xl p-4 shadow-lg max-w-md mx-auto"
+                className="bg-[var(--color-lightPurple)]/20 backdrop-blur-lg rounded-xl p-4 shadow-lg max-w-md mx-auto"
               >
                 <div className="flex justify-between items-start">
                   <div>
-                    <h3 className="text-lg font-semibold text-white">{card.title}</h3>
-                    <p className="text-blue-400 text-sm mt-1">{card.time}</p>
+                    <h3 className="text-lg font-semibold text-fontCream">{card.title}</h3>
+                    <p className="text-[var(--color-lightPink)] text-sm mt-1">{card.time}</p>
                   </div>
                 </div>
-                <p className="text-gray-300 text-sm mt-2">{card.description}</p>
+                <p className="text-[var(--color-secondaryCream)]/80 text-sm mt-2">{card.description}</p>
               </motion.div>
             ))}
           </AnimatePresence>

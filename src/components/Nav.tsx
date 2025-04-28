@@ -4,12 +4,12 @@ const Nav = () => {
   return (
     <nav className="p-4">
       <div className="max-w-4xl mx-auto flex justify-between items-center">
-        <Link to="/" className="text-white text-xl font-bold">Hack the Heights</Link>
+        <Link to="/" className="text-fontCream text-xl font-bold">Hack the Heights</Link>
         <div className="space-x-4">
-          <Link to="/" className="text-gray-300 hover:text-white transition-colors">Home</Link>
-          <Link to="/schedule" className="text-gray-300 hover:text-white transition-colors">Schedule</Link>
-          <Link to="/about" className="text-gray-300 hover:text-white transition-colors">About</Link>
-          <Link to="/sponsors" className="text-gray-300 hover:text-white transition-colors">Sponsors</Link>
+          <Link to="/" className="text-[var(--color-lightPurple)] hover:text-fontCream transition-colors">Home</Link>
+          <Link to="/schedule" className="text-[var(--color-lightPurple)] hover:text-fontCream transition-colors">Schedule</Link>
+          <Link to="/about" className="text-[var(--color-lightPurple)] hover:text-fontCream transition-colors">About</Link>
+          <Link to="/sponsors" className="text-[var(--color-lightPurple)] hover:text-fontCream transition-colors">Sponsors</Link>
         </div>
       </div>
     </nav>

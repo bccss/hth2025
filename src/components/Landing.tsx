@@ -33,7 +33,7 @@ function Landing() {
             rel="noopener noreferrer"
             className={`
               bg-backgroundCream text-fontPurple px-8 py-2 rounded-xl transition-all duration-300
-              hover:bg-fontPurple hover:text-backgroundCream font-medium text-lg
+              hover:bg-[var(--color-lightPink)] hover:text-fontCream font-medium text-lg
               transform ${isHovered ? 'scale-105' : ''} ${isPressed ? 'scale-95' : ''}
               shadow-lg hover:shadow-xl active:shadow
             `}
@@ -54,7 +54,7 @@ function Landing() {
           href="https://bccss.co/" 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="text-white hover:text-backgroundCream transition-colors"
+          className="text-fontCream hover:text-[var(--color-lightPink)] transition-colors"
         >
           bccss.co
         </a>
@@ -62,7 +62,7 @@ function Landing() {
           Interested in sponsoring us?{' '}
           <a 
             href="mailto:bccssociety@gmail.com" 
-            className="underline text-white hover:text-backgroundCream transition-colors"
+            className="underline text-fontCream hover:text-[var(--color-lightPink)] transition-colors"
           >
             Click here!
           </a>
