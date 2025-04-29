@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import colors from '../styles/colors';
 
 interface ScheduleCard {
   id: string;
@@ -77,13 +78,41 @@ const Schedule = () => {
     ],
   };
 
+  // Card variants for animations
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0 }
+  };
+
   return (
-    <div className="min-h-screen bg-backgroundPurple py-12 px-4">
+    <section className="min-h-screen bg-backgroundPurple py-12 px-4 sm:px-6">
       <div className="max-w-2xl mx-auto">
-        <h2 className="text-4xl font-bold text-fontCream text-center mb-8">Schedule</h2>
+        <motion.h2 
+          className="text-4xl font-bold text-fontCream text-center mb-8"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          Schedule
+        </motion.h2>
         
         {/* Day Switcher */}
-        <div className="flex justify-center mb-8">
+        <motion.div 
+          className="flex justify-center mb-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
           <div className="relative bg-[var(--color-lightPurple)]/50 rounded-full p-1">
             <motion.div
               className="absolute h-full bg-[var(--color-lightPink)] rounded-full"
@@ -99,6 +128,8 @@ const Schedule = () => {
                 activeDay === 'day1' ? 'text-fontCream' : 'text-[var(--color-secondaryCream)]/70'
               }`}
               onClick={() => setActiveDay('day1')}
+              aria-pressed={activeDay === 'day1'}
+              aria-label="View Day 1 Schedule"
             >
               Day 1
             </button>
@@ -107,37 +138,46 @@ const Schedule = () => {
                 activeDay === 'day2' ? 'text-fontCream' : 'text-[var(--color-secondaryCream)]/70'
               }`}
               onClick={() => setActiveDay('day2')}
+              aria-pressed={activeDay === 'day2'}
+              aria-label="View Day 2 Schedule"
             >
               Day 2
             </button>
           </div>
-        </div>
+        </motion.div>
 
         {/* Schedule Cards */}
         <div className="space-y-3">
           <AnimatePresence mode="wait">
-            {cards[activeDay].map((card) => (
-              <motion.div
-                key={card.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                whileHover={{ scale: 1.02 }}
-                className="bg-[var(--color-lightPurple)]/20 backdrop-blur-lg rounded-xl p-4 shadow-lg max-w-md mx-auto"
-              >
-                <div className="flex justify-between items-start">
-                  <div>
-                    <h3 className="text-lg font-semibold text-fontCream">{card.title}</h3>
-                    <p className="text-[var(--color-lightPink)] text-sm mt-1">{card.time}</p>
+            <motion.div
+              key={activeDay}
+              variants={containerVariants}
+              initial="hidden"
+              animate="show"
+              exit={{ opacity: 0, y: -20 }}
+              className="space-y-3"
+            >
+              {cards[activeDay].map((card) => (
+                <motion.div
+                  key={card.id}
+                  variants={cardVariants}
+                  whileHover={{ scale: 1.02, boxShadow: "0 10px 25px -5px rgba(0,0,0,0.1)" }}
+                  className="bg-[var(--color-lightPurple)]/20 backdrop-blur-lg rounded-xl p-4 sm:p-5 shadow-lg max-w-md mx-auto"
+                >
+                  <div className="flex justify-between items-start">
+                    <div>
+                      <h3 className="text-lg sm:text-xl font-semibold text-fontCream">{card.title}</h3>
+                      <p className="text-[var(--color-lightPink)] text-sm mt-1">{card.time}</p>
+                    </div>
                   </div>
-                </div>
-                <p className="text-[var(--color-secondaryCream)]/80 text-sm mt-2">{card.description}</p>
-              </motion.div>
-            ))}
+                  <p className="text-[var(--color-secondaryCream)]/80 text-sm mt-2">{card.description}</p>
+                </motion.div>
+              ))}
+            </motion.div>
           </AnimatePresence>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

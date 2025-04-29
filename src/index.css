@@ -2,6 +2,7 @@
 @import "tailwindcss";
 
 :root {
+  /* Import these values from colors.ts */
   --color-primaryPurple: #432F70;
   --color-secondaryCream: #F9F5EF;
   --color-lightPurple: #9F86C0;
@@ -13,6 +14,8 @@ body {
   font-family: var(--font-body);
   color: var(--color-secondaryCream);
   font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @keyframes fadeIn {
@@ -32,12 +35,45 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-body);
+  line-height: 1.2;
 }
 
+/* Responsive text classes */
+@media (max-width: 640px) {
+  h1 { font-size: clamp(2rem, 8vw, 3rem); }
+  h2 { font-size: clamp(1.5rem, 6vw, 2.25rem); }
+  h3 { font-size: clamp(1.25rem, 5vw, 1.75rem); }
+}
+
+/* Focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-lightPink);
+  outline-offset: 2px;
+}
+
+/* Screen reader only class */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Background colors */
 .bg-backgroundPurple {
   background-color: var(--color-primaryPurple);
 }
 
+.bg-backgroundCream {
+  background-color: var(--color-secondaryCream);
+}
+
+/* Text colors */
 .text-fontPurple {
   color: var(--color-primaryPurple);
 }
@@ -46,6 +82,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-secondaryCream);
 }
 
-.bg-backgroundCream {
-  background-color: var(--color-secondaryCream);
+/* Add smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
 }
