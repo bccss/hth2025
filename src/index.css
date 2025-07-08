@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15:wght@400&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -7,17 +7,51 @@
   --color-secondaryCream: #F9F5EF;
   --color-lightPurple: #9F86C0;
   --color-lightPink: #E0B1CB;
-  --font-body: 'Jersey 15';
+  --font-body: 'Jersey 15', cursive;
+  
+  /* Enhanced spacing and sizing */
+  --nav-height: 80px;
+  --border-radius: 12px;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
 }
 
 body {
   font-family: var(--font-body);
   color: var(--color-secondaryCream);
   font-weight: 400;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
 
+/* Enhanced typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-body);
+  line-height: 1.2;
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+/* Improved responsive typography */
+@media (max-width: 640px) {
+  h1 { font-size: clamp(2rem, 8vw, 3rem); line-height: 1.1; }
+  h2 { font-size: clamp(1.5rem, 6vw, 2.25rem); line-height: 1.2; }
+  h3 { font-size: clamp(1.25rem, 5vw, 1.75rem); line-height: 1.3; }
+  p { font-size: clamp(0.9rem, 4vw, 1.1rem); }
+}
+
+/* Enhanced animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -29,26 +63,84 @@ body {
   }
 }
 
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
 .animate-fade-in {
   animation: fadeIn 0.8s ease-out forwards;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-body);
-  line-height: 1.2;
+.animate-slide-in-left {
+  animation: slideInLeft 0.6s ease-out forwards;
 }
 
-/* Responsive text classes */
-@media (max-width: 640px) {
-  h1 { font-size: clamp(2rem, 8vw, 3rem); }
-  h2 { font-size: clamp(1.5rem, 6vw, 2.25rem); }
-  h3 { font-size: clamp(1.25rem, 5vw, 1.75rem); }
+.animate-slide-in-right {
+  animation: slideInRight 0.6s ease-out forwards;
 }
 
-/* Focus styles for accessibility */
+.animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Enhanced focus styles for better accessibility */
 :focus-visible {
   outline: 2px solid var(--color-lightPink);
   outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Focus styles for interactive elements */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--color-lightPink);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(224, 177, 203, 0.2);
+}
+
+/* Enhanced button base styles */
+button {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-family: inherit;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Enhanced link styles */
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
 }
 
 /* Screen reader only class */
@@ -64,7 +156,7 @@ h1, h2, h3, h4, h5, h6 {
   border-width: 0;
 }
 
-/* Background colors */
+/* Enhanced utility classes */
 .bg-backgroundPurple {
   background-color: var(--color-primaryPurple);
 }
@@ -73,7 +165,6 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--color-secondaryCream);
 }
 
-/* Text colors */
 .text-fontPurple {
   color: var(--color-primaryPurple);
 }
@@ -82,7 +173,161 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-secondaryCream);
 }
 
-/* Add smooth scrolling for the entire page */
+/* Enhanced glassmorphism effect */
+.glass {
+  backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--border-radius);
+}
+
+/* Enhanced card styles */
+.card {
+  background: rgba(159, 134, 192, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(159, 134, 192, 0.2);
+  border-radius: var(--border-radius);
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  border-color: rgba(224, 177, 203, 0.4);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Enhanced gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-lightPink), var(--color-lightPurple));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Smooth scrolling for the entire page */
 html {
   scroll-behavior: smooth;
+}
+
+/* Enhanced scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(67, 47, 112, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--color-lightPink), var(--color-lightPurple));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--color-lightPurple), var(--color-lightPink));
+}
+
+/* Enhanced mobile optimizations */
+@media (max-width: 768px) {
+  /* Improve touch targets */
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Better spacing on mobile */
+  .mobile-spacing {
+    padding: 1rem;
+  }
+  
+  /* Prevent horizontal scroll */
+  body {
+    overflow-x: hidden;
+  }
+  
+  /* Better mobile typography */
+  p {
+    line-height: 1.7;
+  }
+}
+
+/* Enhanced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Enhanced high contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --color-primaryPurple: #2D1F4F;
+    --color-secondaryCream: #FFFFFF;
+    --color-lightPurple: #8B6DC0;
+    --color-lightPink: #D078A8;
+  }
+}
+
+/* Enhanced dark mode support (if needed) */
+@media (prefers-color-scheme: dark) {
+  /* Already using dark theme, but we can adjust for better contrast */
+  :root {
+    --color-primaryPurple: #5D4A8A;
+    --color-secondaryCream: #F9F5EF;
+  }
+}
+
+/* Loading states */
+.loading {
+  position: relative;
+  color: transparent;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Enhanced print styles */
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+  
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
+  
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
 }
