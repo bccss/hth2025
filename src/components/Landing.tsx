@@ -4,7 +4,6 @@ import cat from '../assets/catcatcat.gif'
 import { motion, useScroll, useTransform } from 'framer-motion'
 
 function Landing() {
-  const [isHovered, setIsHovered] = useState(false)
   const [windowHeight, setWindowHeight] = useState(window.innerHeight)
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
 
@@ -244,8 +243,6 @@ function Landing() {
               target="_blank"
               rel="noopener noreferrer"
               className="bg-gradient-to-r from-[var(--color-lightPink)] to-[var(--color-lightPurple)] text-fontCream px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group w-full sm:w-auto text-center"
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
               whileHover={{ 
                 scale: 1.05,
                 boxShadow: "0 20px 40px rgba(224, 177, 203, 0.4)"

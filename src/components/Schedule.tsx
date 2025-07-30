@@ -322,7 +322,7 @@ const Schedule = () => {
           <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[var(--color-lightPink)] to-[var(--color-lightPurple)] opacity-30"></div>
 
           <div className="space-y-8">
-            {events[activeDay].map((event, index) => (
+            {events[activeDay].map((event) => (
               <motion.div
                 key={event.id}
                 variants={itemVariants}
