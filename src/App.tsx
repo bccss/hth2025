@@ -103,7 +103,7 @@ function App() {
 
   // Enhanced scroll to top button visibility with debouncing
   useEffect(() => {
-    let timeoutId: NodeJS.Timeout;
+    let timeoutId: number;
     
     const handleScroll = () => {
       setIsScrolling(true);
