@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react'
 import '../index.css'
-import cat from '../assets/catcatcat.gif'
+//import cat from '../assets/catcatcat.gif'
+import dudes from '../assets/HTH25Splash.png'
+import rose from '../assets/rose 1.svg'
+import rose2 from '../assets/rose 2.png'
 import { motion, useScroll, useTransform } from 'framer-motion'
 
 function Landing() {
@@ -82,18 +85,30 @@ function Landing() {
           whileHover={{ scale: 1.02 }}
           transition={{ type: "spring", stiffness: 300 }}
         >
-          <div className="flex items-center justify-center gap-2 sm:gap-3">
-            <span className="text-2xl sm:text-3xl">🎉</span>
-            <div className="text-center">
-              <div className="text-fontCream font-bold text-sm sm:text-base md:text-lg">
-                CELEBRATING 10 YEARS OF INNOVATION
+                      <div className="flex items-center justify-center gap-2 sm:gap-3">
+              <motion.img 
+                src={rose} 
+                alt="Rose decoration" 
+                className="w-8 h-8 sm:w-10 sm:h-10 object-contain"
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              />
+              <div className="text-center">
+                <div className="text-fontCream font-bold text-sm sm:text-base md:text-lg">
+                  CELEBRATING 10 YEARS OF INNOVATION
+                </div>
+                <div className="text-fontCream/90 text-xs sm:text-sm font-medium">
+                  HTH 2025 • 10th Anniversary Edition • A Decade of Hacking Excellence
+                </div>
               </div>
-              <div className="text-fontCream/90 text-xs sm:text-sm font-medium">
-                HTH 2025 • 10th Anniversary Edition • A Decade of Hacking Excellence
-              </div>
+              <motion.img 
+                src={rose2} 
+                alt="Rose decoration" 
+                className="w-8 h-8 sm:w-10 sm:h-10 object-contain"
+                whileHover={{ scale: 1.1, rotate: -5 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              />
             </div>
-            <span className="text-2xl sm:text-3xl">🎉</span>
-          </div>
         </motion.div>
 
         {/* Floating confetti elements */}
@@ -144,9 +159,9 @@ function Landing() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="mb-8"
+            className="mb-4"
           >
-            <motion.img 
+            {/* <motion.img 
               src={cat} 
               alt="Hack the Heights mascot" 
               className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 object-contain mx-auto mb-6 drop-shadow-[0_0_25px_rgba(224,177,203,0.6)]"
@@ -162,6 +177,18 @@ function Landing() {
                 target.onerror = null;
                 target.src = 'https://placehold.co/200x200?text=HTH';
               }}
+            /> */}
+            <motion.img 
+              src={dudes} 
+              alt="Hack the Heights mascot" 
+              className="w-2/3 object-contain mx-auto drop-shadow-[0_0_25px_rgba(224,177,203,0.6)]"
+              whileHover={{ 
+                scale: 1.1, 
+                rotate: 10,
+                filter: "drop-shadow(0 0 30px rgba(224,177,203,0.8))"
+              }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 300 }}
             />
           </motion.div>
 
