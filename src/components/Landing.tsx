@@ -221,7 +221,7 @@ function Landing() {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             Boston College's premier hackathon where{' '}
-            <span className="text-[var(--color-lightPink)] font-semibold">innovation meets community</span>.
+            <span className="text-[var(--color-lightPink)] font-semibold">innovation meets community</span>. 
             <br className="hidden sm:block" />
             Celebrating a decade of excellence with 500+ fellow hackers for 24 hours of building something amazing.
           </motion.p>
@@ -266,7 +266,7 @@ function Landing() {
             transition={{ duration: 0.5, delay: 0.6 }}
           >
             <motion.a 
-              href="https://mailchi.mp/8125d9b64c7b/sign-up-for-our-newsletter-bccss"
+              href="https://forms.gle/UjvVou31bR8xBMjr5"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-gradient-to-r from-[var(--color-lightPink)] to-[var(--color-lightPurple)] text-fontCream px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group w-full sm:w-auto text-center"
