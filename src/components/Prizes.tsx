@@ -54,74 +54,74 @@ function Prizes() {
     }
   ]
 
-  const categoryPrizes: CategoryPrize[] = [
-    {
-      title: 'Best AI/ML Implementation',
-      amount: 'TBA',
-      description: 'Most innovative use of artificial intelligence or machine learning',
-      icon: '🤖',
-      challenge: 'Build something that leverages AI to solve real-world problems'
-    },
-    {
-      title: 'Best Social Impact',
-      amount: 'TBA', 
-      description: 'Project that makes the biggest positive difference in the world',
-      icon: '🌍',
-      challenge: 'Create technology that addresses social, environmental, or humanitarian issues'
-    },
-    {
-      title: 'Best Technical Achievement',
-      amount: 'TBA',
-      description: 'Most impressive technical complexity and innovation',
-      icon: '⚡',
-      challenge: 'Push the boundaries of what\'s possible with code'
-    },
-    {
-      title: 'Best Design & UX',
-      amount: 'TBA',
-      description: 'Most beautiful and user-friendly interface',
-      icon: '🎨',
-      challenge: 'Create an experience that users will love to use'
-    },
-    {
-      title: 'Best Beginner Project',
-      amount: 'TBA',
-      description: 'Outstanding project by first-time hackathon participants',
-      icon: '🌟',
-      challenge: 'Show that great ideas can come from anywhere'
-    },
-    {
-      title: 'People\'s Choice Award',
-      amount: 'TBA',
-      description: 'Voted by hackathon participants as their favorite',
-      icon: '❤️',
-      challenge: 'Win the hearts of your fellow hackers'
-    }
-  ]
+  // const categoryPrizes: CategoryPrize[] = [
+  //   {
+  //     title: 'Best AI/ML Implementation',
+  //     amount: 'TBA',
+  //     description: 'Most innovative use of artificial intelligence or machine learning',
+  //     icon: '🤖',
+  //     challenge: 'Build something that leverages AI to solve real-world problems'
+  //   },
+  //   {
+  //     title: 'Best Social Impact',
+  //     amount: 'TBA', 
+  //     description: 'Project that makes the biggest positive difference in the world',
+  //     icon: '🌍',
+  //     challenge: 'Create technology that addresses social, environmental, or humanitarian issues'
+  //   },
+  //   {
+  //     title: 'Best Technical Achievement',
+  //     amount: 'TBA',
+  //     description: 'Most impressive technical complexity and innovation',
+  //     icon: '⚡',
+  //     challenge: 'Push the boundaries of what\'s possible with code'
+  //   },
+  //   {
+  //     title: 'Best Design & UX',
+  //     amount: 'TBA',
+  //     description: 'Most beautiful and user-friendly interface',
+  //     icon: '🎨',
+  //     challenge: 'Create an experience that users will love to use'
+  //   },
+  //   {
+  //     title: 'Best Beginner Project',
+  //     amount: 'TBA',
+  //     description: 'Outstanding project by first-time hackathon participants',
+  //     icon: '🌟',
+  //     challenge: 'Show that great ideas can come from anywhere'
+  //   },
+  //   {
+  //     title: 'People\'s Choice Award',
+  //     amount: 'TBA',
+  //     description: 'Voted by hackathon participants as their favorite',
+  //     icon: '❤️',
+  //     challenge: 'Win the hearts of your fellow hackers'
+  //   }
+  // ]
 
-  const sponsorPrizes: CategoryPrize[] = [
-    {
-      title: 'Sponsor Challenge #1',
-      amount: 'TBA',
-      description: 'Sponsor-specific challenge prize',
-      icon: '☁️',
-      challenge: 'Details to be announced with sponsor confirmation'
-    },
-    {
-      title: 'Sponsor Challenge #2',
-      amount: 'TBA',
-      description: 'Sponsor-specific challenge prize',
-      icon: '💰',
-      challenge: 'Details to be announced with sponsor confirmation'
-    },
-    {
-      title: 'Sponsor Challenge #3',
-      amount: 'TBA',
-      description: 'Sponsor-specific challenge prize',
-      icon: '🔗',
-      challenge: 'Details to be announced with sponsor confirmation'
-    }
-  ]
+  // const sponsorPrizes: CategoryPrize[] = [
+  //   {
+  //     title: 'Sponsor Challenge #1',
+  //     amount: 'TBA',
+  //     description: 'Sponsor-specific challenge prize',
+  //     icon: '☁️',
+  //     challenge: 'Details to be announced with sponsor confirmation'
+  //   },
+  //   {
+  //     title: 'Sponsor Challenge #2',
+  //     amount: 'TBA',
+  //     description: 'Sponsor-specific challenge prize',
+  //     icon: '💰',
+  //     challenge: 'Details to be announced with sponsor confirmation'
+  //   },
+  //   {
+  //     title: 'Sponsor Challenge #3',
+  //     amount: 'TBA',
+  //     description: 'Sponsor-specific challenge prize',
+  //     icon: '🔗',
+  //     challenge: 'Details to be announced with sponsor confirmation'
+  //   }
+  // ]
 
   const pastWinners: PastWinner[] = [
     {
