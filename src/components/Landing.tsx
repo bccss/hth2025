@@ -81,11 +81,11 @@ function Landing() {
         </div>
 
         <motion.div 
-          className="text-center relative z-10 px-4"
+          className="text-center justify-evenly relative z-10 px-4"
           whileHover={{ scale: 1.02 }}
           transition={{ type: "spring", stiffness: 300 }}
         >
-                      <div className="flex items-center justify-center gap-2 sm:gap-3">
+            <div className="flex items-center justify-evenly gap-2 sm:gap-3">
               <motion.img 
                 src={rose} 
                 alt="Rose decoration" 
@@ -95,10 +95,10 @@ function Landing() {
               />
               <div className="text-center">
                 <div className="text-fontCream font-bold text-sm sm:text-base md:text-lg">
-                  CELEBRATING 10 YEARS OF INNOVATION
+                  HACK THE HEIGHTS 10TH ANNIVERSARY
                 </div>
                 <div className="text-fontCream/90 text-xs sm:text-sm font-medium">
-                  HTH 2025 • 10th Anniversary Edition • A Decade of Hacking Excellence
+                  Celebrating a Decade of Hacking Excellence
                 </div>
               </div>
               <motion.img 
@@ -206,12 +206,12 @@ function Landing() {
           </motion.h1>
 
           <motion.div
-            className="text-2xl sm:text-3xl md:text-4xl font-bold text-[var(--color-lightPink)] mb-2"
+            className="text-xl sm:text-2xl md:text-3xl font-bold text-[var(--color-lightPink)] mb-2"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            Fall 2025 • 10th Anniversary
+            October 25 - 26, 2025
           </motion.div>
 
           <motion.p 
@@ -220,8 +220,8 @@ function Landing() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            Boston College's premier hackathon where{' '}
-            <span className="text-[var(--color-lightPink)] font-semibold">innovation meets community</span>. 
+            {/* Boston College's premier hackathon where{' '} */}
+            <span className="text-[var(--color-lightPink)] font-semibold">Where innovation meets community.</span>
             <br className="hidden sm:block" />
             Celebrating a decade of excellence with 500+ fellow hackers for 24 hours of building something amazing.
           </motion.p>
@@ -277,7 +277,7 @@ function Landing() {
               whileTap={{ scale: 0.95 }}
             >
               <span className="absolute top-0 left-0 w-0 h-full bg-white opacity-20 transform -skew-x-20 transition-all duration-1000 ease-out group-hover:w-full"></span>
-              <span className="relative z-10">🚀 Register Now</span>
+              <span className="relative z-10">Register Now</span>
             </motion.a>
 
             <motion.button 
@@ -333,7 +333,7 @@ function Landing() {
                   animate={{ rotate: [0, 10, -10, 0] }}
                   transition={{ duration: 2, repeat: Infinity }}
                 >
-                  ✨
+                  {/* lemme cop a pixel art */} 
                 </motion.span>
               </div>
               <div className="text-xs sm:text-sm md:text-base text-fontCream">Years</div>

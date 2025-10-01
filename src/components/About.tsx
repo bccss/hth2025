@@ -194,10 +194,10 @@ function About() {
                 Hack the Heights
               </span>
             </h1>
-            <p className="text-lg sm:text-xl text-fontCream/80 max-w-4xl mx-auto leading-relaxed mb-8">
+            {/* <p className="text-lg sm:text-xl text-fontCream/80 max-w-4xl mx-auto leading-relaxed mb-8">
               Boston College's premier hackathon where innovation meets community. For ten years, we've been 
               bringing together the brightest minds to build the future, one line of code at a time.
-            </p>
+            </p> */}
           </motion.div>
 
           {/* Mission Statement */}
@@ -495,20 +495,20 @@ function About() {
                 Be part of something bigger. Join hundreds of BC students in building the future, 
                 one hackathon at a time. Your journey starts here.
               </p>
-              <motion.a
-                href="https://mailchi.mp/8125d9b64c7b/sign-up-for-our-newsletter-bccss"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-gradient-to-r from-[var(--color-lightPink)] to-[var(--color-lightPurple)] text-fontCream px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group"
-                whileHover={{ 
-                  scale: 1.05,
-                  boxShadow: "0 20px 40px rgba(224, 177, 203, 0.4)"
-                }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <span className="absolute top-0 left-0 w-0 h-full bg-white opacity-20 transform -skew-x-20 transition-all duration-1000 ease-out group-hover:w-full"></span>
-                <span className="relative z-10">🚀 Join HTH 2025</span>
-              </motion.a>
+              <motion.a 
+              href="https://forms.gle/UjvVou31bR8xBMjr5"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gradient-to-r from-[var(--color-lightPink)] to-[var(--color-lightPurple)] text-fontCream px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group w-full sm:w-auto text-center"
+              whileHover={{ 
+                scale: 1.05,
+                boxShadow: "0 20px 40px rgba(224, 177, 203, 0.4)"
+              }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <span className="absolute top-0 left-0 w-0 h-full bg-white opacity-20 transform -skew-x-20 transition-all duration-1000 ease-out group-hover:w-full"></span>
+              <span className="relative z-10">Register Now</span>
+            </motion.a>
             </div>
           </motion.div>
         </div>

@@ -199,9 +199,6 @@ function Sponsors() {
                 Sponsor
               </span>
             </h1>
-            <p className="text-lg sm:text-xl text-fontCream/80 max-w-4xl mx-auto leading-relaxed mb-8">
-              Boston College's hackathon isn't just another coding event; it embodies our values of social responsibility, growth, and diversity.
-            </p>
 
             {/* Call to Action Banner */}
             <motion.div
