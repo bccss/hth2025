@@ -36,85 +36,85 @@ const Schedule = () => {
         id: '1',
         title: 'Registration & Check-in',
         time: '11:30AM - 12:00PM',
-        description: 'Full schedule to be announced on day of event. Stay tuned for detailed timing and locations!',
+        description: 'Check in and get ready for what\'s to come!',
         type: 'ceremony',
         icon: '🎯',
         isRequired: true,
-        tags: ['Registration', 'Welcome']
+        //tags: ['Registration', 'Welcome']
       },
       {
         id: '2',
         title: 'Opening Ceremony',
         time: '12:00PM - 12:30PM',
-        description: 'Full schedule to be announced on day of event. Get ready for an inspiring kickoff!',
+        description: 'Get acquainted with the event and the team.',
         type: 'ceremony',
         icon: '🚀',
         isRequired: true,
-        tags: ['Keynote', 'Opening']
+        //tags: ['Keynote', 'Opening']
       },
       {
         id: '3',
         title: 'Hacking Begins!',
         time: '12:30PM',
-        description: 'Full schedule to be announced on day of event. The 24-hour coding marathon starts here!',
+        description: 'Start working on your projects!',
         type: 'coding',
         icon: '💻',
         isRequired: true,
-        tags: ['Coding', 'Development']
+        //tags: ['Coding', 'Development']
       },
       {
         id: '4',
         title: 'Team Formation',
         time: '12:30 PM - 1:00 PM',
-        description: 'Full schedule to be announced on day of event. Perfect opportunity to find your dream team!',
+        description: 'Perfect opportunity to find your dream team.',
         type: 'networking',
         icon: '🤝',
-        tags: ['Team Building', 'Networking']
+        //tags: ['Team Building', 'Networking']
       },
       {
         id: '5',
         title: 'Lunchtime!',
         time: '1:00 PM - 2:00 PM',
-        description: 'Full schedule to be announced on day of event. Perfect opportunity to find your dream team!',
+        description: 'Take a break and recharge.',
         type: 'networking',
         icon: '🤝',
-        tags: ['Food']
+        //tags: ['Food']
       },
       {
         id: '6',
         title: 'Beginner Coding Workshop',
         time: '2:00PM-3:00PM',
-        description: 'Full schedule to be announced on day of event. Amazing workshops and delicious food await!',
+        description: 'Learn how to code with a beginner-friendly workshop.',
         type: 'workshop',
         icon: '📚',
-        tags: ['Learning']
+        //tags: ['Learning']
       },
       {
         id: '7',
         title: 'Speaker Event',
         time: '4:00PM-5:00PM',
-        description: 'Full schedule to be announced on day of event. Get guidance from industry experts!',
+        description: 'Gain some insight from industry leaders.',
         type: 'networking',
         icon: '🧠',
-        tags: ['Speaker', 'Help']
+        //tags: ['Speaker', 'Help']
       },
       {
         id: '8',
         title: 'Dinner',
         time: '7:00PM-8:00PM',
-        description: 'Full schedule to be announced on day of event. Learn about exciting career opportunities!',
+        description: 'Grab some food and recharge.',
         type: 'presentation',
         icon: '🏢',
-        tags: ['Food']
+        //tags: ['Food']
       },
       {
         id: '9',
         title: 'Game Night',
         time: '8:00PM-9:00PM',
         description: 'CS students have fun too. Join for some games!',
-        type: 'activities',
+        type: 'networking',
         icon: '🌙',
-        tags: ['Activities']
+        //tags: ['Activities']
       }
     ],
     day2: [
@@ -122,57 +122,48 @@ const Schedule = () => {
         id: '9',
         title: 'Morning Kickoff & Breakfast',
         time: '10:00AM-11:00AM',
-        description: 'Full schedule to be announced on day of event. Start your final day strong!',
+        description: 'Start your final day strong!',
         type: 'meal',
         icon: '☕',
-        tags: ['Breakfast']
+        //tags: ['Breakfast']
       },
       {
         id: '10',
         title: 'Hacking Ends!',
         time: '12:30PM',
-        description: 'Full schedule to be announced on day of event. Last-minute tips and final development push!',
+        description: 'Last-minute push! Submit your work.',
         type: 'workshop',
         icon: '⚡',
-        tags: ['Final Sprint', 'Workshops']
-      },
-      {
-        id: '11',
-        title: 'Project Finalization',
-        time: 'TBA',
-        description: 'Full schedule to be announced on day of event. Put the finishing touches on your projects!',
-        type: 'coding',
-        icon: '🔧',
-        tags: ['Finalization', 'Polish']
+        //tags: ['Final Sprint', 'Workshops']
       },
       {
         id: '12',
         title: 'Project Demos',
         time: '12:45PM - 1:30PM',
-        description: 'Full schedule to be announced on day of event. Submit your amazing creations!',
+        description: 'See what everyone has been working on.',
         type: 'presentation',
         icon: '📤',
         isRequired: true,
-        tags: ['Submission', 'Deadline']
+        //tags: ['Submission', 'Deadline']
       },
       {
         id: '14',
         title: 'Judging & Deliberation',
         time: '1:30PM - 2:15PM',
-        description: 'Full schedule to be announced on day of event. While judges deliberate, relax and network!',
+        description: 'While judges deliberate, relax and network!',
         type: 'judging',
         icon: '⚖️',
-        tags: ['Judging', 'Networking']
+        //tags: ['Judging', 'Networking']
       },
       {
         id: '15',
         title: 'Awards Ceremony',
         time: '2:30PM',
-        description: 'Full schedule to be announced on day of event. Celebrate winners and wrap up an amazing hackathon!',
+        description: 'Celebrate winners and wrap up an amazing hackathon!',
         type: 'ceremony',
         icon: '🏆',
         isRequired: true,
-        tags: ['Awards', 'Celebration']
+        //tags: ['Awards', 'Celebration']
       }
     ]
   };
@@ -277,8 +268,8 @@ const Schedule = () => {
         >
           <div className="bg-[var(--color-lightPurple)]/20 backdrop-blur-lg rounded-xl p-2 border border-[var(--color-lightPurple)]/30">
             {[
-              { key: 'day1', label: 'Day 1', date: 'Fall XX' },
-              { key: 'day2', label: 'Day 2', date: 'Fall XX' }
+              { key: 'day1', label: 'Day 1', date: 'Oct. 25' },
+              { key: 'day2', label: 'Day 2', date: 'Oct. 26' }
             ].map((day) => (
               <button
                 key={day.key}
@@ -395,7 +386,7 @@ const Schedule = () => {
                         <div className="text-center">
                           <div className="inline-flex items-center gap-2 bg-[var(--color-lightPink)]/10 text-[var(--color-lightPink)] px-4 py-2 rounded-lg">
                             <span className="text-lg">ℹ️</span>
-                            <span className="font-medium">More details coming soon!</span>
+                            <span className="font-medium">Locations and more details will be announced before the event!</span>
                           </div>
                         </div>
                       </motion.div>
