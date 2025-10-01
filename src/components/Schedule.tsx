@@ -407,7 +407,7 @@ const Schedule = () => {
         >
           <div className="bg-gradient-to-r from-[var(--color-lightPurple)]/20 to-[var(--color-lightPink)]/20 backdrop-blur-lg rounded-2xl p-8 sm:p-12 border border-[var(--color-lightPurple)]/30">
             <h3 className="text-2xl sm:text-3xl font-bold text-fontCream mb-4">
-              Ready to Join the Fun?
+              Ready to Build?
             </h3>
             <p className="text-fontCream/80 text-lg mb-8 max-w-2xl mx-auto">
               Don't miss out on this incredible experience! Register now to secure your spot 
