@@ -279,15 +279,6 @@ function Landing() {
               <span className="absolute top-0 left-0 w-0 h-full bg-white opacity-20 transform -skew-x-20 transition-all duration-1000 ease-out group-hover:w-full"></span>
               <span className="relative z-10">Register Now</span>
             </motion.a>
-
-            <motion.button 
-              className="bg-transparent border-2 border-[var(--color-lightPurple)] text-fontCream px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:bg-[var(--color-lightPurple)]/20 transition-all duration-300 w-full sm:w-auto"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Learn More
-            </motion.button>
           </motion.div>
 
           {/* Quick Stats */}
