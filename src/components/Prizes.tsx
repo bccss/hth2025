@@ -9,14 +9,14 @@ interface Prize {
   color: string
 }
 
-interface CategoryPrize {
-  title: string
-  amount: string
-  description: string
-  icon: string
-  sponsor?: string
-  challenge?: string
-}
+// interface CategoryPrize {
+//   title: string
+//   amount: string
+//   description: string
+//   icon: string
+//   sponsor?: string
+//   challenge?: string
+// }
 
 interface PastWinner {
   year: string
