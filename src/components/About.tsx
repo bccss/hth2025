@@ -16,6 +16,12 @@ interface Testimonial {
   project?: string;
 }
 
+interface Speaker {
+  name: string;
+  job: string;
+  photo: string;
+}
+
 interface Stat {
   number: string;
   label: string;
@@ -37,25 +43,43 @@ function About() {
 
   const testimonials: Testimonial[] = [
     {
-      name: 'Name',
-      year: 'Class of 20XX',
-      major: 'Major',
-      quote: 'Quote',
-      project: 'Project'
+      name: 'Max Zhang',
+      year: 'Class of 2027',
+      major: 'Computer Science',
+      quote: 'Hack the Heights is the best opportunity to learn and build with others.',
+      //project: 'Coin (data science project)'
     },
     {
-      name: 'Name',
-      year: 'Class of 20XX',
-      major: 'Major',
-      quote: 'Quote',
-      project: 'Project'
+      name: 'Nathan Thai',
+      year: 'Class of 2027',
+      major: 'Computer Science',
+      quote: 'Going to this hackathon with my friends forced us to build together, and we all ended up learning and having a ton of fun!',
+      //project: ' (web app)'
     },
     {
-      name: 'Name',
-      year: 'Class of 20XX',
-      major: 'Major',
-      quote: 'Quote',
-      project: 'Project'
+      name: 'Parker Wang',
+      year: 'Class of 2026',
+      major: 'Computer Science',
+      quote: 'If I were you, I would definitely be here next year! ',
+      //project: 'What\'s Cookin? (recipe generator)'
+    }
+  ];
+
+  const speakers: Speaker[] = [
+    {
+      name: 'KJ Gonzalez',
+      job: 'Solutions Engineering Analyst @ Deloitte',
+      photo: '/src/assets/KJ Gonzalez Headshot.jpg'
+    },
+    {
+      name: 'Terence Tirella',
+      job: 'Project Manager @ Shopify',
+      photo: '/src/assets/headshot_small.png'
+    },
+    {
+      name: 'Kelsey Zeng',
+      job: 'ex-SWE @ Amazon',
+      photo: 'https://media.licdn.com/dms/image/v2/D4E03AQGh8sN8H9imEg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1723498279627?e=1762387200&v=beta&t=O-QzvElc8AO4zcpIcPyetcySbZgZioh6HDp0icslDJQ'
     }
   ];
 
@@ -379,6 +403,56 @@ function About() {
         </div>
       </section>
 
+      {/* Our Speakers */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-fontCream mb-4">
+              Our Speakers
+            </h2>
+            <p className="text-fontCream/80 text-lg">
+              Meet industry professionals and hear about their experiences.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {speakers.map((speaker, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-gradient-to-br from-[var(--color-lightPurple)]/15 to-[var(--color-lightPink)]/15 backdrop-blur-lg rounded-xl p-6 border border-[var(--color-lightPurple)]/30"
+                whileHover={{ scale: 1.02 }}
+              >
+                <div className="flex items-start space-x-4">
+                  <img 
+                    src={speaker.photo} 
+                    alt={speaker.name}
+                    className="w-20 h-20 rounded-full object-cover border-2 border-[var(--color-lightPurple)]/50 flex-shrink-0"
+                  />
+                  <div className="flex-1">
+                    <h3 className="text-[var(--color-lightPink)] font-bold text-lg mb-2">
+                      {speaker.name}
+                    </h3>
+                    <p className="text-fontCream/80 text-sm leading-relaxed">
+                      {speaker.job}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto">
@@ -410,7 +484,7 @@ function About() {
               ].map((category) => (
                 <button
                   key={category.key}
-                  onClick={() => setSelectedFAQCategory(category.key as any)}
+                  onClick={() => setSelectedFAQCategory(category.key as 'all' | 'general' | 'registration' | 'event' | 'technical')}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                     selectedFAQCategory === category.key
                       ? 'bg-gradient-to-r from-[var(--color-lightPink)] to-[var(--color-lightPurple)] text-fontCream'
