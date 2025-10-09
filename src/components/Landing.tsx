@@ -266,7 +266,7 @@ function Landing() {
             transition={{ duration: 0.5, delay: 0.6 }}
           >
             <motion.a 
-              href="https://forms.gle/UjvVou31bR8xBMjr5"
+              href="https://docs.google.com/forms/d/e/1FAIpQLScPxNHEkekQLYEZI72Dj6fr33f-dOMXDbfYKlFkwCYLZY0e8A/viewform?usp=dialog"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-gradient-to-r from-[var(--color-lightPink)] to-[var(--color-lightPurple)] text-fontCream px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group w-full sm:w-auto text-center"
