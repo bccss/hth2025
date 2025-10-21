@@ -26,7 +26,7 @@ function Landing() {
 
   // Countdown timer (set to a future date - adjust as needed)
   useEffect(() => {
-    const targetDate = new Date('2025-10-15T09:00:00').getTime()
+    const targetDate = new Date('2025-10-25T09:00:00').getTime()
     
     const timer = setInterval(() => {
       const now = new Date().getTime()
