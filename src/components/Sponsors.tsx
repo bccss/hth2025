@@ -234,7 +234,7 @@ function Sponsors() {
             ].map((tier) => (
               <button
                 key={tier.key}
-                onClick={() => setSelectedTier(tier.key as any)}
+                onClick={() => setSelectedTier(tier.key as 'all' | 'bronze' | 'silver' | 'gold' | 'diamond')}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   selectedTier === tier.key
                     ? 'bg-gradient-to-r from-[var(--color-lightPink)] to-[var(--color-lightPurple)] text-fontCream'
